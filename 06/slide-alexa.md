@@ -93,7 +93,7 @@ id : 001
 ### index.js
 
 ```javascript
-let menu = Alexa.getSlotValue(handlerInput.requestEnvelope, "amount");
+let menu = Alexa.getSlotValue(handlerInput.requestEnvelope, "menu");
 let amount = Alexa.getSlotValue(handlerInput.requestEnvelope, "amount");
 const speechText = `${menu} ${amount}つですね、ありがとうございます。`;
 ```
