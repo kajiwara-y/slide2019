@@ -79,6 +79,8 @@ if(menuSlot && menuSlot.resolutions){
 }
 ```
 
+---
+
 ## 課題
 
 ### 以下の挙動を試してみてください
