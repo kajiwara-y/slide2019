@@ -17,9 +17,9 @@
 
 
 ```javascript
-let attributes = handlerInput.attributeManager.getSessionAttributes();
+let attributes = handlerInput.attributesManager.getSessionAttributes();
 let menu = Alexa.getSlotValue(handlerInput.requestEnvelope,"menu") || attributes.menu;
-let amount = Alexa.getSlotValue(handlerInput.requestEnvelope,"menu") || attributes.amount;
+let amount = Alexa.getSlotValue(handlerInput.requestEnvelope,"amount") || attributes.amount;
 ```
 
 ---
@@ -30,7 +30,7 @@ let amount = Alexa.getSlotValue(handlerInput.requestEnvelope,"menu") || attribut
 
 if (menu === undefined){
   attribute.amount = amount;
-  handlerInput.attributeManager.setSessionAttributes(attributes);
+  handlerInput.attributesManager.setSessionAttributes(attributes);
   const speechOutput = '何を注文しますか？'
   const reprompt = '何を注文しますか？'
   return handlerInput.responseBuilder
@@ -49,7 +49,7 @@ if (menu === undefined){
 
 if (amount === undefined){
   attribute.menu = menu;
-  handlerInput.attributeManager.setSessionAttributes(attributes);
+  handlerInput.attributesManager.setSessionAttributes(attributes);
   const speechOutput = 'おいくつ注文しますか？'
   const reprompt = 'おいくつ注文しますか？'
   return handlerInput.responseBuilder
