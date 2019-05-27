@@ -2,14 +2,14 @@
 
 (スマートスピーカーアプリ開発)
 
-2019/05/21
+2019/05/27
 
 ---
 
 ## 以下のようなケースの場合どうなるでしょうか？
 
-* ユーザーが商品だけを発話し、数量を言わなかった場合
-* ユーザーが数量だけを発話し、商品を言わなかった場合
+- ユーザーが商品だけを発話し、数量を言わなかった場合
+- ユーザーが数量だけを発話し、商品を言わなかった場合
 
 ---
 
@@ -23,25 +23,44 @@
 ## セッションアトリビュート
 
 <div style="text-align: left;">
-![user](user.png "ユーザー")「アレクサ、コーヒーショップを開いて、コーヒーをください」   
-![alexa](alexa.png "Alexa")「コーヒーですね。おいくつご用意しましょうか?」  
-![user](user.png "ユーザー")「二つお願い」   
+<p>
+  <img src="user.png" alt="user" title="ユーザー">「アレクサ、コーヒーショップを開いて、コーヒーをください」
+</p> 
+<p>
+  <img src="alexa.png" alt="alexa" title="Alexa">「コーヒーですね。おいくつご用意しましょうか?」
+</p>
+<p>
+  <img src="user.png" alt="user" title="ユーザー">「二つお願い」</p>
+</p>
 </div>
 
 --
 
 ## セッションアトリビュート
+
 <div style="text-align: left;">
-![alexa](alexa.png "Alexa")「コーヒーを2つですね。お砂糖はおつけしますか?」  
-![user](user.png "ユーザー")「はい」  
-![alexa](alexa.png "Alexa") 「コーヒーを2つ、お砂糖をつけてご用意いたします。ご利用ありがとうございました。」
+
+<p>
+  <img src="alexa.png" alt="alexa" title="Alexa">「コーヒーを2つですね。お砂糖はおつけしますか?」
+</p>
+<p>
+  <img src="user.png" alt="user" title="ユーザー">「はい」
+</p> 
+<p>
+  <img src="alexa.png" alt="alexa" title="Alexa">「コーヒー２つ、お砂糖つけてご用意します。ご利用ありがとうございました。」
+</p>
 </div>
 
 ---
+
 <style type="text/css">
+p {
+float: left;
+}
 img {
 width: 60px;
 height: 60px;
+float: left;
 }
 .mes{
   display:inline-block;
