@@ -62,7 +62,33 @@ if (amount === undefined){
 
 ---
 
+## メニューのみ注文後、数量を発話した後にエラーとなる
+
+```javascript
+let menuSlot = Alexa.getSlot(handlerInput.requestEnvelope, "menu")
+if(menuSlot && menuSlot.resolutions){
+    let status = menuSlot.resolutions.resolutionsPerAuthority[0].status.code;
+    if (status === "ER_SUCCESS_MATCH") {
+        menu = menuSlot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+    } else {
+        const sorryMessage = `申し訳無いのですが、 ${menu} はご提供できません。 コーヒーはいかがですか？`
+        return handlerInput.responseBuilder
+            .speak(sorryMessage)
+            .getResponse();
+    }
+}
+```
+
 ## 課題
+
+### 以下の挙動を試してみてください
+
+* コーヒーショップで、アイスコーヒー三つ
+* コーヒーショップで、アイスコーヒー → 三つ
+
+本来、アイスコーヒーはこのスキルでは注文できないはずですが、今の実装では
+数量を後に指定することで、注文ができてしまいます。
+数量指定しなくても注文ができないように実装を修正してみましょう。
 
 ### 複数の注文を受け取れるように実装を進めてみましょう
 
