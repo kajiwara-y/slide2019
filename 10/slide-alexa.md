@@ -147,7 +147,7 @@ package.json に以下の記述をしてください。
 
 ```javascript
 const request = require('request');
-discordWebHookUri = 'コピーしたWebHookのURL'
+const discordWebHookUri = 'コピーしたWebHookのURL'
 const options = {
   uri: discordWebHookUri,
   headers: {
