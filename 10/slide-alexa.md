@@ -31,18 +31,25 @@ Math.floor((new Date()).getTime()/1000)
 
 ```javascript
 const attr = await handlerInput.attributesManager.getPersistentAttributes();
+const lastOrder = attr.lastOrder;
 const lastDate = attr.lastDate;
 const nowDate = Math.floor((new Date()).getTime()/1000)
-
-diffDate = nowDate - lastDate
-diffDay = Math.floor(diffDate / (24 * 60 * 60))
+console.log(nowDate)
+console.log(lastDate)
+let diffDate = null
+if(lastDate){
+    diffDate = nowDate - lastDate
+}
+const diffDay =  Math.floor(diffDate / (24 * 60 * 60))
 let speechText = `ようこそ。`;
-if(diffDay > 0){
+if (diffDate && diffDay > 0) {
     speechText += ` ${diffDay}ぶりですね、お久しぶりです。`;
 }
-speechText += `今日は何を注文しますか?`;
+if (lastOrder !== undefined) {
+    speechText += `前回は ${lastOrder}を注文しましたね。`;
+}
 attr.lastDate = nowDate
-await handlerInput.attributesManager.savePersistentAttributes();
+await handlerInput.attributesManager.savePersistentAttributes()
 ```
 
 ---
