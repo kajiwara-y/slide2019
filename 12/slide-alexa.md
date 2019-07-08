@@ -112,7 +112,7 @@ return responseBuilder
 
 ```javascript
 const APLDocs = {
-  launch: require('./documents/launchRequest.json')
+  launch: require('./documents/launchRequest.json'),
   order: require('./documents/order.json')
 };
 ```

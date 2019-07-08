@@ -1,0 +1,85 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "height": "100vh",
+                "item": [
+                    {
+                        "type": "Text",
+                        "paddingTop": "50px",
+                        "text": "すきなメニューをえらんでね"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "100vw",
+                        "height": "65vh",
+                        "alignItems": "center",
+                        "direction": "row",
+                        "justifyContent": "end",
+                        "item": [
+                            {
+                                "type": "Image",
+                                "width": "33vw",
+                                "height": "50vh",
+                                "paddingLeft": "20",
+                                "paddingRight": "20",
+                                "source": "https://alexa-tama-img.s3-ap-northeast-1.amazonaws.com/001.png",
+                                "align": "left",
+                                "borderRadius": "50"
+                            },
+                            {
+                                "type": "Image",
+                                "width": "33vw",
+                                "height": "50vh",
+                                "source": "https://alexa-tama-img.s3-ap-northeast-1.amazonaws.com/003.png",
+                                "borderRadius": "50"
+                            },
+                            {
+                                "type": "Image",
+                                "width": "33vw",
+                                "height": "50vh",
+                                "source": "https://alexa-tama-img.s3-ap-northeast-1.amazonaws.com/004.png",
+                                "borderRadius": "50"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "direction": "row",
+                        "item": [
+                            {
+                                "type": "Text",
+                                "width": "33vw",
+                                "textAlign": "center",
+                                "text": "コーヒー"
+                            },
+                            {
+                                "type": "Text",
+                                "width": "33vw",
+                                "textAlign": "center",
+                                "text": "カフェラテ"
+                            },
+                            {
+                                "type": "Text",
+                                "width": "33vw",
+                                "textAlign": "center",
+                                "text": "オレンジジュース"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

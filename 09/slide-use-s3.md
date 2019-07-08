@@ -111,7 +111,7 @@ exports.handler = Alexa.SkillBuilders.custom()
 
 ### index.js
 
-```
+```javascript
 const OrderIntentHandler = {
     ～中略～
     // [**追加**] 非同期処理のため async を追加する
@@ -120,7 +120,7 @@ const OrderIntentHandler = {
 
 --
 
-```
+```javascript
     async handle(handlerInput) {;
         // 中略
         const speechText = `${menu} ${amount}つで${product_price * amount}円です。砂糖をつけてご用意します。ご利用ありがとうございます。`
@@ -142,7 +142,7 @@ const OrderIntentHandler = {
 
 ### index.js
 
-```
+```javascript
 const LaunchRequestHandler = {
     ～中略～
     // [**追加**] 非同期処理のため async を追加する
@@ -151,7 +151,7 @@ const LaunchRequestHandler = {
 
 --
 
-```
+```javascript
         // [**追加/変更**]
         const attr = await handlerInput.attributesManager.getPersistentAttributes();
         const lastOrder = attr.lastOrder;
