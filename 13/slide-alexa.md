@@ -76,3 +76,19 @@
 ---
 
 ## 画面のボタン押下に対応してみる
+
+デモ
+
+---
+
+## 実装
+
+[差分](https://github.com/kajiwara-y/coffeeshop_2019/commit/b7bd6597658fd33a7589c81ce66ac77498ae4f52#diff-66148b0a8271f0a4b53efc334387c8b1)
+
+--
+
+[documents/launchRequest.json](https://github.com/kajiwara-y/coffeeshop_2019/blob/b7bd6597658fd33a7589c81ce66ac77498ae4f52/lambda/documents/launchRequest.json)
+
+--
+
+[lambda/index.js](https://github.com/kajiwara-y/coffeeshop_2019/blob/b7bd6597658fd33a7589c81ce66ac77498ae4f52/lambda/index.js)
