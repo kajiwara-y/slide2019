@@ -87,7 +87,7 @@
 
 --
 
-[documents/launchRequest.json](https://github.com/kajiwara-y/coffeeshop_2019/blob/b7bd6597658fd33a7589c81ce66ac77498ae4f52/lambda/documents/launchRequest.json)
+[lambda/documents/launchRequest.json](https://github.com/kajiwara-y/coffeeshop_2019/blob/b7bd6597658fd33a7589c81ce66ac77498ae4f52/lambda/documents/launchRequest.json)
 
 --
 
